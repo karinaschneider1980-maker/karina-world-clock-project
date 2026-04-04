@@ -17,36 +17,38 @@
             alt="world" />
 
         <div class="container">
-
             <h1>World Clock</h1>
-            <select>
-                <option value="">Select a city</option>
-                <option value="new york">New York</option>
-                <option value="amsterdam">Amsterdam</option>
-                <option value="seoul">Seoul</option>
-            </select>
 
-            <div class="cities" id="usa">
-                <div>
-                    <h4>New York</h4>
-                    <div class="date"></div>
+            <select id="city">
+                <option value="">Select a city</option>
+                <option value="America/New_York">New York</option>
+                <option value="Europe/Amsterdam">Amsterdam</option>
+                <option value="Asia/Seoul">Seoul</option>
+            </select>
+            <div id="cities">
+                <div class="city" id="usa">
+                    <div>
+                        <h4>New York</h4>
+                        <div class="date"></div>
+                    </div>
+                    <div class="time"></div>
                 </div>
-                <div class="time"></div>
-            </div>
-            <div class="cities" id="europe">
-                <div>
-                    <h4>Amsterdam</h4>
-                    <div class="date"></div>
+                <div class="city" id="europe">
+                    <div>
+                        <h4>Amsterdam</h4>
+                        <div class="date"></div>
+                    </div>
+                    <div class="time"></div>
                 </div>
-                <div class="time"></div>
-            </div>
-            <div class="cities" id="asia">
-                <div>
-                    <h4>Seoul</h4>
-                    <div class="date"></div>
+                <div class="city" id="asia">
+                    <div>
+                        <h4>Seoul</h4>
+                        <div class="date"></div>
+                    </div>
+                    <div class="time"></div>
                 </div>
-                <div class="time"></div>
             </div>
+
         </div>
     </div>
 
@@ -62,9 +64,7 @@
             Afbeelding van "" op Freepik
         </a>
     </footer>
-    </div>
     <script src="javascript/index.js"></script>
 </body>
-
 
 </html>

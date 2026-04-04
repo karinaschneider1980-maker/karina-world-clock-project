@@ -1,11 +1,13 @@
 body {
   margin: 0;
+  min-width: 900px;
 }
 
 .image {
   position: relative;
   overflow: hidden;
   height: 100vh;
+  min-width: 900px;
 }
 
 .image img {
@@ -49,7 +51,7 @@ select {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.cities {
+.city {
   display: flex;
   justify-content: space-between;
   font-size: 20px;
@@ -57,7 +59,7 @@ select {
   border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
 
-.cities:last-child {
+.city:last-child {
   border: none;
 }
 
