@@ -1,19 +1,14 @@
 body {
   margin: 0;
-  min-width: 900px;
-}
-
-.image {
-  position: relative;
-  overflow: hidden;
-  height: 100vh;
-  min-width: 900px;
-}
-
-.image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  min-height: 100vh;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/179/344/original/19388.jpg?1774963017");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 5%;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -23,11 +18,11 @@ h1 {
   color: white;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   letter-spacing: 1px;
-  max-width: 300px;
 }
 
 h4 {
   margin: 0;
+  text-shadow: 1px 1px 3px rgba(241, 241, 241, 0.633);
 }
 
 select {
@@ -37,18 +32,33 @@ select {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   border-radius: 10px;
   padding: 10px;
+  box-shadow: 1px 1px 3px rgba(241, 241, 241, 0.633);
 }
 
 .container {
-  position: absolute;
-  background-color: #b1ebffa3;
-  padding: 40px 100px 100px 100px;
+  background: linear-gradient(135deg, #b1ebffa3, #5ba8c9cc, #b1ebffa3);
+  background-size: 400% 400%;
+  animation: gradientShift 6s ease infinite;
+  padding: 10px 40px 80px 40px;
   border-radius: 50px;
-  top: 50px;
-  right: 150px;
-  z-index: 10;
-  max-width: 600px;
+  max-width: 500px;
+  width: 350px;
+  align-self: center;
+  margin-right: 60px;
+  margin-bottom: 50px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .city {
@@ -56,7 +66,8 @@ select {
   justify-content: space-between;
   font-size: 20px;
   margin-top: 40px;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .city:last-child {
@@ -69,19 +80,49 @@ select {
 }
 
 .time {
-  font-size: 22px;
+  font-size: 28px;
   margin-top: 8px;
   font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(241, 241, 241, 0.633);
+  animation: pulse 2s ease-in-out infinite;
 }
 
 .time small {
   font-size: 10px;
 }
 
+.flip {
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+.flip.changed {
+  animation: faderoll 0.4s ease;
+}
+
+@keyframes faderoll {
+  0% {
+    transform: translateY(-8px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#cities a {
+  display: block;
+  margin-top: 25px;
+  font-size: 12px;
+  color: white;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
 footer {
   position: absolute;
   bottom: 20px;
-  right: 40px;
+  right: 80px;
   color: white;
   font-size: 12px;
   opacity: 0.8;
